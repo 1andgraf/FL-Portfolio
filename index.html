@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filipp Landgraf | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Filipp Landgraf - Web & App Developer, Video Editor, and 3D Artist."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="techy-dark">
+    <div class="side-stripe-left"></div>
+    <div class="side-stripe-right"></div>
+    <header id="main-header">
+      <nav>
+        <div class="logo">
+          <img src="pics/logotech.png" alt="Logo" class="header-logo" />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <button class="" onclick="scrollToSection('welcome')">Home</button>
+          </li>
+          <li>
+            <button class="" onclick="scrollToSection('about')">About</button>
+          </li>
+          <li>
+            <button class="" onclick="scrollToSection('tech')">Tech</button>
+          </li>
+          <li>
+            <button class="" onclick="scrollToSection('projects')">
+              Projects
+            </button>
+          </li>
+          <li>
+            <button class="" onclick="scrollToSection('contact')">
+              Contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcome" class="hero section-reveal">
+        <div class="section-decorator-top">COORD_0.0.0</div>
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <h1>FILIPP LANDGRAF</h1>
+            <div class="hero-cta">
+              <button class="btn-tech" onclick="scrollToSection('about')">
+                About me
+              </button>
+              <a
+                href="https://github.com/1andgraf"
+                target="_blank"
+                class="btn-tech"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="logo-placeholder">
+              <img src="pics/logotech.png" alt="Logo" class="hero-logo" />
+              <div class="logo-placeholder-meta">PHOTO_ID: FL_LOGO</div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-reveal">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text">
+              <div class="section-decorator-left">[01]</div>
+              <h2 class="section-title">About</h2>
+              <p>
+                I am a web and app developer. I build websites, mobile and
+                desktop applications. <br />I am also a video editor with big
+                experience using Adobe Premiere Pro and After Effects. <br />I
+                also do 3D modelling, tracking, texturing and animation in
+                Blender, Cinema 4D and SketchUp.
+              </p>
+            </div>
+            <div class="about-cards">
+              <div class="info-card">
+                <div class="info-card-image">
+                  <img src="pics/webdev.png" alt="Web Development" />
+                </div>
+                <div class="info-card-content">
+                  <h3>Web development</h3>
+                  <p>
+                    I have experience in development using HTML, CSS,
+                    JavaScript, React, Node.js, and Python. I also have
+                    experience with databases like MongoDB and PostgreSQL.
+                  </p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-card-image">
+                  <img src="pics/appdev.png" alt="App Development" />
+                </div>
+                <div class="info-card-content">
+                  <h3>App development</h3>
+                  <p>
+                    I have developed mobile and desktop applications using React
+                    Native, C# and Java.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="info-card"
+                onclick="
+                  window.open(
+                    'https://filipplandgraf.framer.website/',
+                    '_blank',
+                  )
+                "
+                style="cursor: pointer"
+              >
+                <div class="info-card-image">
+                  <img src="pics/3dmodelling.png" alt="Content and 3D" />
+                </div>
+                <div class="info-card-content">
+                  <h3>Content and 3D</h3>
+                  <p>
+                    I create videos and 3D models using tools like Premiere Pro,
+                    After Effects, Blender.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech" class="section section-reveal">
+        <div class="container">
+          <div class="section-decorator-left">[02]</div>
+          <h2 class="section-title">Tech Stack</h2>
+          <p class="section-subtitle">
+            This is the list of technologies I have worked with.
+          </p>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <i class="fa-brands fa-html5"></i
+              ><span class="tech-tag">HTML</span>
+            </div>
+            <div class="tech-item">
+              <i class="fa-brands fa-css3-alt"></i
+              ><span class="tech-tag">CSS</span>
+            </div>
+            <div class="tech-item">
+              <i class="fa-brands fa-js"></i><span class="tech-tag">JS</span>
+            </div>
+            <div class="tech-item">
+              <i class="fa-brands fa-react"></i
+              ><span class="tech-tag">React</span>
+            </div>
+            <div class="tech-item">
+              <i class="fa-brands fa-node-js"></i
+              ><span class="tech-tag">NodeJS</span>
+            </div>
+            <div class="tech-item">
+              <i class="fa-solid fa-code"></i><span class="tech-tag">C++</span>
+            </div>
+            <div class="tech-item">
+              <i class="fa-brands fa-python"></i
+              ><span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-reveal">
+        <div class="container">
+          <div class="section-decorator-left">[03]</div>
+          <h2 class="section-title">Projects</h2>
+          <div class="project-gallery" id="gallery-container"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-reveal">
+        <div class="container">
+          <div class="section-decorator-left">[04]</div>
+          <h2 class="section-title scramble">Contact</h2>
+          <div class="contact-links">
+            <a href="https://t.me/derdart" class="contact-card"
+              ><i class="fa-brands fa-telegram"></i><span>Telegram</span></a
+            >
+            <a
+              href="https://www.instagram.com/derdart_inst/"
+              class="contact-card"
+              ><i class="fa-brands fa-instagram"></i><span>Instagram</span></a
+            >
+            <a href="mailto:landgraf.filipp@gmail.com" class="contact-card"
+              ><i class="fa-solid fa-envelope"></i><span>Email</span></a
+            >
+            <a href="https://github.com/1andgraf" class="contact-card"
+              ><i class="fa-brands fa-github"></i><span>GitHub</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Filipp Landgraf.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
