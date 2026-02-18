@@ -142,11 +142,15 @@ nav {
   transform: scale(1.1);
 }
 
+.info-card,
 .tech-item,
 .project-frame,
 .contact-card,
 .nav-links button {
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-color 0.3s ease;
+  text-decoration: none;
 }
 
 .tech-item:hover,
@@ -154,6 +158,9 @@ nav {
 .contact-card:hover,
 .nav-links button:hover {
   transform: scale(1.05);
+}
+.info-card:hover {
+  transform: scale(1.02);
 }
 
 .hero {
@@ -376,17 +383,23 @@ nav {
   gap: 1rem;
 }
 
-.info-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 1rem;
-  transition: border-color 0.3s;
+/* Standardized Card Brackets */
+.info-card,
+.tech-item,
+.project-frame,
+.contact-card {
   position: relative;
   overflow: visible;
 }
 
 .info-card::before,
-.info-card::after {
+.info-card::after,
+.tech-item::before,
+.tech-item::after,
+.project-frame::before,
+.project-frame::after,
+.contact-card::before,
+.contact-card::after {
   content: "";
   position: absolute;
   width: 8px;
@@ -394,28 +407,52 @@ nav {
   border-color: var(--accent-color);
   opacity: 0.3;
   pointer-events: none;
+  transition:
+    opacity 0.3s,
+    border-color 0.3s;
+  z-index: 10;
 }
 
-.info-card::before {
+.info-card::before,
+.tech-item::before,
+.project-frame::before,
+.contact-card::before {
   top: -1px;
   left: -1px;
-  border-top: 1px solid;
-  border-left: 1px solid;
+  border-top: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
 }
 
-.info-card::after {
+.info-card::after,
+.tech-item::after,
+.project-frame::after,
+.contact-card::after {
   bottom: -1px;
   right: -1px;
-  border-bottom: 1px solid;
-  border-right: 1px solid;
+  border-bottom: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.info-card:hover::before,
+.info-card:hover::after,
+.tech-item:hover::before,
+.tech-item:hover::after,
+.project-frame:hover::before,
+.project-frame:hover::after,
+.contact-card:hover::before,
+.contact-card:hover::after {
+  opacity: 0.8;
+  border-color: var(--text-primary);
+}
+
+.info-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
 }
 
 .info-card:last-child {
   grid-column: span 2;
-}
-
-.info-card:hover {
-  border-color: var(--text-primary);
 }
 
 .info-card-image {
@@ -525,29 +562,14 @@ nav {
   aspect-ratio: 16/10;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  position: relative;
   display: block;
   text-decoration: none;
-  overflow: hidden;
   transition:
     transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.4s ease;
 }
 
-.project-frame::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 10px;
-  height: 10px;
-  border-top: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-  opacity: 0.3;
-}
-
 .project-frame:hover {
-  border-color: var(--text-primary);
   transform: scale(1.02);
 }
 
@@ -562,7 +584,7 @@ nav {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--accent-color);
-  opacity: 0.8;
+  opacity: 1;
   letter-spacing: 1px;
 }
 
@@ -655,7 +677,6 @@ nav {
 }
 
 .contact-card:hover {
-  border-color: var(--text-primary);
   transform: scale(1.02);
 }
 
@@ -747,6 +768,9 @@ footer {
   .nav-links {
     display: none;
   }
+  nav {
+    justify-content: center;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -772,5 +796,8 @@ footer {
   .side-stripe-left,
   .side-stripe-right {
     display: none;
+  }
+  .hero-cta {
+    justify-content: center;
   }
 }
